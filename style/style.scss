@@ -1,0 +1,189 @@
+$background-color: #000;
+$primary: #00f0ff;
+$secondary: #258FE6;
+$accent: #fbf5f3;
+$margin-bottom-h4: 4rem;
+
+@mixin flex($align: center) {
+    display: flex;
+    align-items: $align;
+    justify-content: center;
+}
+
+@mixin section-size ($height:100vh){
+    width: 100%;
+    height: $height;
+}
+
+@mixin text-h1 {
+    font-size: 4rem;
+    line-height: 4rem; 
+    margin-bottom: 1.5rem;
+}
+@mixin btn-props{
+    transition: all 0.5s;
+    border-radius: 6px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(68deg, $secondary 0%, $primary 100%);
+    color: $background-color;
+    border-style: none;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.6;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    color: $accent;
+    background-color: $background-color;
+}
+
+//learn section
+
+.learn {
+    @include section-size(40vh);
+    @include flex(start);
+    padding: 0px 10%;
+    text-align: center;
+}
+
+.learn-text {
+    h1 {
+        @include text-h1();
+        margin-top: 1.5rem;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    h4 {
+        margin-top: 4rem;
+        padding: 0px 20%;
+        margin-bottom: $margin-bottom-h4;
+    }
+}
+
+//home section
+
+.home {
+    @include section-size();
+    @include flex();
+    padding: 0px 50% 0px 10%;
+    background-image: url(../img/capa-landingpage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-text {
+    max-width: 37rem;
+
+    img {
+        width: 34%;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        @include text-h1();
+        color: $primary;
+    }
+    h4 {
+        margin-bottom: $margin-bottom-h4;
+    }
+}
+
+.section-btn{
+    @include btn-props();
+    padding: 10px 110px; 
+}
+
+
+
+//about section
+
+.about{
+    @include flex();
+    @include section-size(50vh);
+    flex-direction: column;
+    padding: 0px 10% ;
+}
+.about-text{
+    @include flex();
+}
+.about h1{
+    @include text-h1();
+    margin-bottom: 5rem;
+
+    span{
+        color: $primary
+    }
+}
+// carousel section + begin //
+
+.carousel{
+    @include section-size(40vh);
+    @include flex()
+}
+
+.container {
+    width: 100vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: #fff;
+    display: flex;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scroll-disabler {
+    width: 100vw;
+    height: 450px;
+    position: absolute;
+    background-color: rgba(0,0,0 , 0.0001);
+  }
+  
+   ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  article {
+    min-width: 350px;
+    height: 480px;
+    padding: 1rem;
+    background-color: $background-color;
+  }
+  article .wrapper {
+    padding: 1rem ;
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+  }
+  article .img {
+    height: 50%;
+    background-color: lightgray;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  }
+  
+  article .content > div {
+    height: 3rem;
+    background-color: lightgray;
+    margin: 2rem auto 0 auto;
+    width: 85%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+  }
+  article .content > div:last-child {
+    height: 5rem;
+  }
+
+  // carousel end //
