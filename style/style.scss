@@ -10,29 +10,32 @@ $margin-bottom-h4: 4rem;
     justify-content: center;
 }
 
-@mixin section-size ($height:100vh){
+@mixin section-size ($height: 100vh) {
     width: 100%;
     height: $height;
 }
 
 @mixin text-h1 {
     font-size: 4rem;
-    line-height: 4rem; 
+    line-height: 4rem;
     margin-bottom: 1.5rem;
 }
-@mixin btn-props{
+
+@mixin btn-props {
     transition: all 0.5s;
     border-radius: 6px;
-    font-weight: 700;
+    font-weight: 600;
     background: -webkit-linear-gradient(68deg, $secondary 0%, $primary 100%);
     color: $background-color;
     border-style: none;
     cursor: pointer;
 
-    &:hover{
+
+    &:hover {
         opacity: 0.6;
     }
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -91,45 +94,104 @@ body {
         width: 34%;
         margin-bottom: 2rem;
     }
+
     h1 {
         @include text-h1();
         color: $primary;
     }
+
     h4 {
         margin-bottom: $margin-bottom-h4;
     }
 }
 
-.section-btn{
+.section-btn {
     @include btn-props();
-    padding: 10px 110px; 
+    padding: 10px 110px;
 }
 
 
 
 //about section
 
-.about{
+.about {
     @include flex();
-    @include section-size(50vh);
+    @include section-size(60vh);
     flex-direction: column;
-    padding: 0px 10% ;
+    padding: 0px 10%;
+    margin-bottom: 70px;
 }
-.about-text{
-    @include flex();
+
+.about-content {
+    padding: 0 5%;
+
+    .about-content-container {
+        @include flex();
+        margin-bottom: 4rem;
+        gap: 8rem;
+
+        .info .row {
+            width: 350px;
+            background-color: red;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .btn-div {
+        @include flex();
+    }
+
+    .info h2 {
+        margin-bottom: 1rem;
+        font-size: 36px;
+    }
 }
-.about h1{
+
+.about h1 {
     @include text-h1();
     margin-bottom: 5rem;
 
-    span{
+    span {
         color: $primary
     }
 }
+
+//teacher section
+
+.teacher {
+    @include flex(start);
+    @include section-size(100vh);
+    background-image: url(../img/SOBRE\ A\ PROFESSORA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20% 0px 55%;
+
+    .teacher-content {
+        .div-text {
+            h1 {
+                @include text-h1();
+            }
+            span {
+                color: $primary
+            }
+        }
+        .teacher-about {
+
+            .part1{
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
 // carousel section + begin //
 
-.carousel{
-    @include section-size(40vh);
+.carousel {
+    @include section-size(60vh);
     @include flex()
 }
 
@@ -141,49 +203,52 @@ body {
     display: flex;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  
-  .scroll-disabler {
+}
+
+.scroll-disabler {
     width: 100vw;
     height: 450px;
     position: absolute;
-    background-color: rgba(0,0,0 , 0.0001);
-  }
-  
-   ::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.0001);
+}
+
+::-webkit-scrollbar {
     display: none;
-  }
-  
-  article {
+}
+
+article {
     min-width: 350px;
     height: 480px;
     padding: 1rem;
     background-color: $background-color;
-  }
-  article .wrapper {
-    padding: 1rem ;
+}
+
+article .wrapper {
+    padding: 1rem;
     background-color: #fff;
     height: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-  }
-  article .img {
+}
+
+article .img {
     height: 50%;
     background-color: lightgray;
     border-radius: 25px 25px 0 0;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
-  }
-  
-  article .content > div {
+}
+
+article .content>div {
     height: 3rem;
     background-color: lightgray;
     margin: 2rem auto 0 auto;
     width: 85%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
-  }
-  article .content > div:last-child {
-    height: 5rem;
-  }
+}
 
-  // carousel end //
+article .content>div:last-child {
+    height: 5rem;
+}
+
+// carousel end //
