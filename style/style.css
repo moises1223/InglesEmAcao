@@ -103,8 +103,9 @@ body {
 }
 .about-content .about-content-container .info .row {
   width: 350px;
-  background-color: red;
+  background: linear-gradient(to right, #00f0ff, #000);
   margin-bottom: 1.5rem;
+  height: 1px;
 }
 .about-content .btn-div {
   display: flex;

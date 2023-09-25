@@ -132,8 +132,10 @@ body {
 
         .info .row {
             width: 350px;
-            background-color: red;
+            background: linear-gradient(to right, $primary, $background-color);
             margin-bottom: 1.5rem;
+            height: 1px;
+            
         }
     }
 
