@@ -229,12 +229,14 @@ body {
 
             .student-profile {
                 @include flex();
-                justify-content: start ;
-                .student-info-group{
+                justify-content: start;
+
+                .student-info-group {
                     @include flex(start);
                     flex-direction: column;
                     margin-left: 1rem;
                 }
+
                 .student-image {
                     height: 50px;
                     width: 50px;
@@ -243,8 +245,10 @@ body {
                         border-radius: 50%;
                     }
                 }
+
                 .student-name {
                     display: flex;
+
                     h5 {}
 
                 }
@@ -263,12 +267,65 @@ body {
                 // padding: 0px 12% 0px 0px;
                 width: 350px;
                 height: 10px;
+
                 h4 {}
             }
         }
     }
 }
 
+// guarantee
+
+.guarantee {
+    @include section-size(60vh);
+    @include flex();
+
+    .guarantee-content {
+        @include flex();
+        padding: 0px 10%;
+        img {}
+    }
+
+    .guarantee-terms {     
+        padding: 0px 70px;
+        .guarantee-title {
+            margin-bottom: 2rem;
+            h1 {
+                font-size: 36px;
+                font-weight: 300;
+                line-height: 3rem;
+            }
+        }
+
+        .guarantee-texts {
+            width: 687px;
+            h5{
+                font-size: 24px;
+                font-weight: 300px;
+            }
+        }
+    }
+}
+
+.questions{
+    @include flex();
+    @include section-size(100vh);
+
+    .questions-content{
+        .questions-title{
+            h1{
+
+            }
+            span{
+                color: $primary;
+            }
+        }
+        .questions{
+            
+        }
+        
+    }
+}
 
 
 

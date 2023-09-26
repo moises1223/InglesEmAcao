@@ -214,6 +214,48 @@ body {
   width: 350px;
   height: 10px;
 }
+.guarantee {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guarantee .guarantee-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10%;
+}
+.guarantee .guarantee-terms {
+  padding: 0px 70px;
+}
+.guarantee .guarantee-terms .guarantee-title {
+  margin-bottom: 2rem;
+}
+.guarantee .guarantee-terms .guarantee-title h1 {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 3rem;
+}
+.guarantee .guarantee-terms .guarantee-texts {
+  width: 687px;
+}
+.guarantee .guarantee-terms .guarantee-texts h5 {
+  font-size: 24px;
+  font-weight: 300px;
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.questions .questions-content .questions-title span {
+  color: #00f0ff;
+}
 .carousel {
   width: 100%;
   height: 60vh;
