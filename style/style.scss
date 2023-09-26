@@ -4,6 +4,7 @@ $secondary: #258FE6;
 $accent: #fbf5f3;
 $margin-bottom-h4: 4rem;
 
+
 @mixin flex($align: center) {
     display: flex;
     align-items: $align;
@@ -220,15 +221,19 @@ body {
         padding: 0 5%;
 
         .students-feedback-blocks {
+
             .row {
                 @include row-props();
                 background: linear-gradient(to right, $background-color, $primary, $background-color);
             }
 
             .student-profile {
+                @include flex();
+                justify-content: start ;
                 .student-info-group{
-                    @include flex();
-
+                    @include flex(start);
+                    flex-direction: column;
+                    margin-left: 1rem;
                 }
                 .student-image {
                     height: 50px;
@@ -238,8 +243,8 @@ body {
                         border-radius: 50%;
                     }
                 }
-
                 .student-name {
+                    display: flex;
                     h5 {}
 
                 }
@@ -249,9 +254,15 @@ body {
                 }
             }
 
-            .student-rate {}
+            .student-rate {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
 
-            student-feedback {
+            .student-feedback {
+                // padding: 0px 12% 0px 0px;
+                width: 350px;
+                height: 10px;
                 h4 {}
             }
         }

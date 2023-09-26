@@ -183,10 +183,18 @@ body {
   height: 1px;
   background: linear-gradient(to right, #000, #00f0ff, #000);
 }
-.students .students-content .students-feedback-blocks .student-profile .student-info-group {
+.students .students-content .students-feedback-blocks .student-profile {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: start;
+}
+.students .students-content .students-feedback-blocks .student-profile .student-info-group {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 .students .students-content .students-feedback-blocks .student-profile .student-image {
   height: 50px;
@@ -194,6 +202,17 @@ body {
 }
 .students .students-content .students-feedback-blocks .student-profile .student-image img {
   border-radius: 50%;
+}
+.students .students-content .students-feedback-blocks .student-profile .student-name {
+  display: flex;
+}
+.students .students-content .students-feedback-blocks .student-rate {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.students .students-content .students-feedback-blocks .student-feedback {
+  width: 350px;
+  height: 10px;
 }
 .carousel {
   width: 100%;
