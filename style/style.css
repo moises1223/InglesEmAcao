@@ -103,9 +103,9 @@ body {
 }
 .about-content .about-content-container .info .row {
   width: 350px;
-  background: linear-gradient(to right, #00f0ff, #000);
   margin-bottom: 1.5rem;
   height: 1px;
+  background: linear-gradient(to right, #00f0ff, #000);
 }
 .about-content .btn-div {
   display: flex;
@@ -136,7 +136,7 @@ body {
   background-image: url(../img/SOBRE\ A\ PROFESSORA.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 20% 0px 55%;
+  padding: 50px 18% 0px 55%;
 }
 .teacher .teacher-content .div-text h1 {
   font-size: 4rem;
@@ -151,6 +151,50 @@ body {
   margin-bottom: 1rem;
 }
 
+.students {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+  flex-direction: column;
+  padding: 0px 10%;
+  margin-bottom: 70px;
+}
+.students .h1-title h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 1.5rem;
+  margin-bottom: 7rem;
+}
+.students .h1-title h1 span {
+  color: #00f0ff;
+}
+.students .students-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  padding: 0 5%;
+}
+.students .students-content .students-feedback-blocks .row {
+  width: 350px;
+  margin-bottom: 1.5rem;
+  height: 1px;
+  background: linear-gradient(to right, #000, #00f0ff, #000);
+}
+.students .students-content .students-feedback-blocks .student-profile .student-info-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.students .students-content .students-feedback-blocks .student-profile .student-image {
+  height: 50px;
+  width: 50px;
+}
+.students .students-content .students-feedback-blocks .student-profile .student-image img {
+  border-radius: 50%;
+}
 .carousel {
   width: 100%;
   height: 60vh;

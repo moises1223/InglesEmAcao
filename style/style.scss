@@ -21,6 +21,13 @@ $margin-bottom-h4: 4rem;
     margin-bottom: 1.5rem;
 }
 
+@mixin row-props {
+    width: 350px;
+    margin-bottom: 1.5rem;
+    height: 1px;
+
+}
+
 @mixin btn-props {
     transition: all 0.5s;
     border-radius: 6px;
@@ -131,11 +138,8 @@ body {
         gap: 8rem;
 
         .info .row {
-            width: 350px;
+            @include row-props();
             background: linear-gradient(to right, $primary, $background-color);
-            margin-bottom: 1.5rem;
-            height: 1px;
-            
         }
     }
 
@@ -166,26 +170,110 @@ body {
     background-image: url(../img/SOBRE\ A\ PROFESSORA.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 20% 0px 55%;
+    padding: 50px 18% 0px 55%;
 
     .teacher-content {
         .div-text {
             h1 {
                 @include text-h1();
             }
+
             span {
                 color: $primary
             }
         }
+
         .teacher-about {
 
-            .part1{
+            .part1 {
                 margin-top: 2rem;
                 margin-bottom: 1rem;
             }
         }
     }
 }
+
+
+// students feedback
+
+.students {
+    @include flex();
+    @include section-size(70vh);
+    flex-direction: column;
+    padding: 0px 10%;
+    margin-bottom: 70px;
+
+    .h1-title {
+        h1 {
+            @include text-h1();
+            margin-bottom: 7rem;
+
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    .students-content {
+        @include flex();
+        gap: 8rem;
+        padding: 0 5%;
+
+        .students-feedback-blocks {
+            .row {
+                @include row-props();
+                background: linear-gradient(to right, $background-color, $primary, $background-color);
+            }
+
+            .student-profile {
+                .student-info-group{
+                    @include flex();
+
+                }
+                .student-image {
+                    height: 50px;
+                    width: 50px;
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+
+                .student-name {
+                    h5 {}
+
+                }
+
+                .ocupation {
+                    p {}
+                }
+            }
+
+            .student-rate {}
+
+            student-feedback {
+                h4 {}
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
